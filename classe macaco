@@ -1,0 +1,35 @@
+class Macaco:
+    def __init__(self, nome):
+        self.nome = nome
+        self.bucho = []
+
+    def comer(self, alimento):
+        self.bucho.append(alimento)
+
+    def verBucho(self):
+        print("O macaco comeu:")
+        for alimento in self.bucho:
+            print("-", alimento)
+
+    def digerir(self):
+        self.bucho = []
+
+macaco1 = Macaco("Jorge")
+macaco2 = Macaco("Beto")
+
+macaco1.comer("banana")
+macaco1.comer("maçã")
+macaco1.comer("laranja")
+
+macaco2.comer("cenoura")
+macaco2.comer("alface")
+macaco2.comer("tomate")
+
+macaco1.verBucho()
+macaco2.verBucho()
+
+macaco1.digerir()
+macaco2.digerir()
+
+macaco1.verBucho()
+macaco2.verBucho()
